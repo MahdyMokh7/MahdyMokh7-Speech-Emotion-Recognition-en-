@@ -1,0 +1,2 @@
+# MahdyMokh7-Speech-Emotion-Recognition-en-
+Data analysis on human voices in English, and making a model to predict the emotion of the person talking based purely on its voice.We know that people communicate 50% through body language, 40% through tone of voice, and only 10% through the actual words they say. Our focus is on the 40% aspect, enabling our model to predict a person's emotion.
