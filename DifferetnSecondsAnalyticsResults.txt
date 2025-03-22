@@ -1,0 +1,6 @@
+Total WAV audio files: 7442
+Audio files >= 3 seconds: 1252
+Audio files >= 3.25 seconds: 623
+Audio files >= 3.5 seconds: 355
+Audio files >= 3.75 seconds: 177
+Audio files >= 4 seconds: 84
