@@ -18,7 +18,7 @@ def count_long_audio_files(directory, thresholds=[3, 3.25, 3.5, 3.75, 4]):
                     if duration >= t:
                         results[t] += 1
 
-    results_file_path = os.path.join(".", "DifferetnSecondsAnalyticsResults.txt")
+    results_file_path = os.path.join(".", "Analytics","DifferetnSecondsAnalyticsResults.txt")
     with open(results_file_path, "w") as f:
         f.write(f"Total WAV audio files: {total_files}\n")
         for t in thresholds:
