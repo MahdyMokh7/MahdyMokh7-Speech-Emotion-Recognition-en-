@@ -1,0 +1,73 @@
+Sentence,Emotion,Count
+Don't forget a jacket.,Angry,91
+Don't forget a jacket.,Disgust,91
+Don't forget a jacket.,Fear,91
+Don't forget a jacket.,Happy,91
+Don't forget a jacket.,Neutral,91
+Don't forget a jacket.,Sad,91
+I think I have a doctor's appointment.,Angry,90
+I think I have a doctor's appointment.,Disgust,90
+I think I have a doctor's appointment.,Fear,90
+I think I have a doctor's appointment.,Happy,90
+I think I have a doctor's appointment.,Neutral,90
+I think I have a doctor's appointment.,Sad,90
+I think I have seen this before,Angry,91
+I think I have seen this before,Disgust,91
+I think I have seen this before,Fear,91
+I think I have seen this before,Happy,91
+I think I have seen this before,Neutral,90
+I think I have seen this before,Sad,91
+I wonder what this is about.,Angry,91
+I wonder what this is about.,Disgust,91
+I wonder what this is about.,Fear,91
+I wonder what this is about.,Happy,91
+I wonder what this is about.,Neutral,91
+I wonder what this is about.,Sad,91
+I would like a new alarm clock.,Angry,91
+I would like a new alarm clock.,Disgust,91
+I would like a new alarm clock.,Fear,91
+I would like a new alarm clock.,Happy,91
+I would like a new alarm clock.,Neutral,91
+I would like a new alarm clock.,Sad,91
+I'm on my way to the meeting.,Angry,91
+I'm on my way to the meeting.,Disgust,91
+I'm on my way to the meeting.,Fear,91
+I'm on my way to the meeting.,Happy,91
+I'm on my way to the meeting.,Neutral,91
+I'm on my way to the meeting.,Sad,91
+It's eleven o'clock.,Angry,273
+It's eleven o'clock.,Disgust,273
+It's eleven o'clock.,Fear,273
+It's eleven o'clock.,Happy,273
+It's eleven o'clock.,Neutral,91
+It's eleven o'clock.,Sad,273
+Maybe tomorrow it will be cold.,Angry,90
+Maybe tomorrow it will be cold.,Disgust,90
+Maybe tomorrow it will be cold.,Fear,90
+Maybe tomorrow it will be cold.,Happy,90
+Maybe tomorrow it will be cold.,Neutral,90
+Maybe tomorrow it will be cold.,Sad,90
+That is exactly what happened.,Angry,91
+That is exactly what happened.,Disgust,91
+That is exactly what happened.,Fear,91
+That is exactly what happened.,Happy,91
+That is exactly what happened.,Neutral,90
+That is exactly what happened.,Sad,91
+The airplane is almost full.,Angry,91
+The airplane is almost full.,Disgust,91
+The airplane is almost full.,Fear,91
+The airplane is almost full.,Happy,91
+The airplane is almost full.,Neutral,91
+The airplane is almost full.,Sad,91
+The surface is slick.,Angry,91
+The surface is slick.,Disgust,91
+The surface is slick.,Fear,91
+The surface is slick.,Happy,91
+The surface is slick.,Neutral,91
+The surface is slick.,Sad,91
+We'll stop in a couple of minutes.,Angry,90
+We'll stop in a couple of minutes.,Disgust,90
+We'll stop in a couple of minutes.,Fear,90
+We'll stop in a couple of minutes.,Happy,90
+We'll stop in a couple of minutes.,Neutral,90
+We'll stop in a couple of minutes.,Sad,90
