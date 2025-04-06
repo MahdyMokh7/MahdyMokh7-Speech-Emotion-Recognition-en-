@@ -1,0 +1,4 @@
+Coefficient,Captures
+MFCC1,Overall loudness / energy
+MFCC2-3,General shape of the spectrum
+MFCC4+,Fine details-small variations
