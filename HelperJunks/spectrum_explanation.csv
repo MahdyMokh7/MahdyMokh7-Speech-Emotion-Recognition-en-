@@ -1,6 +1,0 @@
-Feature,Meaning,High Value,Low Value
-Spectral Centroid,Center of mass of the spectrum (where energy is concentrated),Brighter/sharper sound (angry-excited),Duller/softer sound (sad)
-Spectral Bandwidth,Spread of the spectrum around the centroid,Varied frequencies-energetic sounds,Focused-mellow tone
-Spectral Rolloff,Frequency below which 85–95% of energy is contained,More high-frequency energy (angry-happy),Mostly low frequencies (sad-neutral)
-Spectral Contrast,Difference between peaks and valleys in frequency bands,Sharp-punchy sound (angry-excited),Flat-smooth sound (sad-tired)
-Zero Crossing Rate (ZCR),How often the signal crosses the zero line,Noisy-sharp sounds (frustration-anger),Smooth-steady sounds (sad-calm)

@@ -1,0 +1,6 @@
+Feature,Description
+Spectral Centroid,Describes the center of gravity of the sound's frequency content. It reflects where the 'brightness' or focus of the sound is located along the spectrum.
+Spectral Bandwidth,Indicates how wide the frequency content is spread around the centroid. It tells us how concentrated or diverse the frequencies are in a sound.
+Spectral Rolloff,Represents the frequency below which a defined percentage of the total energy lies. It gives an idea of how the energy is distributed in the lower vs higher frequencies.
+Spectral Contrast,Measures the difference between the peaks and valleys of the spectrum in each frequency band. It captures the texture or sharpness of the sound.
+Zero Crossing Rate (ZCR),Counts how frequently the audio signal crosses the zero amplitude line. It reflects the noisiness or granularity of the sound wave.
