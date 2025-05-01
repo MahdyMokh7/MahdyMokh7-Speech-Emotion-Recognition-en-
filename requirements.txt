@@ -1,6 +1,7 @@
 # Database related
 mysql-connector-python
 sqlalchemy
+pymysql
 
 # Data manipulation and processing
 pandas
