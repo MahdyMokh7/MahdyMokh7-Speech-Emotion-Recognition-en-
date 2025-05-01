@@ -1,0 +1,7 @@
+# Ignore the following folders
+plot_feature_mi_corr/
+pca_analysis/
+feature_emotion_barplot/
+correlation_matrix_between_time_frames/
+AudioVisualizations/
+StatisticalImages/
