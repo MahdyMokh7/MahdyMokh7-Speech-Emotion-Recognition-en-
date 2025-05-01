@@ -20,6 +20,3 @@ scikit-learn
 # Data visualization
 matplotlib
 seaborn
-
-# Miscellaneous
-itertools
