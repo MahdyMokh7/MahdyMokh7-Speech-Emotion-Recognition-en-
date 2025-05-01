@@ -1,0 +1,19 @@
+name: Data Pipeline CI 
+
+on: 
+  push: 
+    branches: [ master ] 
+  pull_request: 
+    branches: [ master ] 
+
+jobs: 
+  pipeline-check: 
+    runs-on: windows-latest  
+    steps: 
+      - uses: actions/checkout@v3 
+      - uses: actions/setup-python@v3 
+        with: 
+          python-version: '3.12.5' 
+      - run: pip install -r requirements.txt 
+      - run: python pipeline.py
+      - run: echo "Running pipeline..."
