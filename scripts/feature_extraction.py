@@ -20,14 +20,16 @@ import seaborn as sns
 
 # === CONFIGURATION ===
 preprocessed_dataset_path = os.path.join("..", "PreProcessedDataSet_for_ML")
-csv_features_path = os.path.join("..", "Features", "audio_features.csv")
-csv_features_path_separated = os.path.join("..", "Features", "audio_features_separated.csv")
-csv_aggregated_features_path = os.path.join("..", "Features", "audio_aggregated_features.csv")
-csv_final_features_path = os.path.join("..", "Features", "final_features.csv")
+FEATURE_FOLDER_PATH = os.path.join("..", "Features")
+csv_features_path = os.path.join(FEATURE_FOLDER_PATH, "audio_features.csv")
+csv_features_path_separated = os.path.join(FEATURE_FOLDER_PATH, "audio_features_separated.csv")
+csv_aggregated_features_path = os.path.join(FEATURE_FOLDER_PATH, "audio_aggregated_features.csv")
+csv_final_features_path = os.path.join(FEATURE_FOLDER_PATH, "final_features.csv")
 N_FFT = 512 # 32 ms window 
 HOP_LENGTH = 205 # 12.8 ms step → 60% overlap
 SR=16000 
 N_MFCC=13 
+os.makedirs(FEATURE_FOLDER_PATH, exist_ok=True)
 
 
 

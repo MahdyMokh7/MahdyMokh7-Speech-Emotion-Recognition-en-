@@ -5,3 +5,4 @@ feature_emotion_barplot/
 correlation_matrix_between_time_frames/
 AudioVisualizations/
 StatisticalImages/
+.env
