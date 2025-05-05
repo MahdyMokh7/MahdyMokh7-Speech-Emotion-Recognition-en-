@@ -1,23 +1,32 @@
 import os
 from dotenv import load_dotenv
+from urllib.parse import quote_plus
 from sqlalchemy import create_engine
 
 def get_connection():
-    # Database credentials (replace with your own)
     try:
         load_dotenv()
-
         username = os.getenv("MYSQL_USER")
-        password = os.getenv("MYSQL_PASSWORD")
+        password = quote_plus(os.getenv("MYSQL_PASSWORD"))
         host = os.getenv("MYSQL_HOST", "localhost")
-        port = os.getenv("MYSQL_PORT", "3306")
+        port = int(os.getenv("MYSQL_PORT", "3306"))
         database = os.getenv("MYSQL_DB")
 
+        print("Username:", username)
+        print("Password:", '*' * len(password) if password else None)
+        print("Host:", host)
+        print("Port:", port)
+        print("Database:", database)
+
+
         connection_string = f"mysql+pymysql://{username}:{password}@{host}:{port}/{database}"
-        engine = create_engine(connection_string)
+        engine = create_engine(connection_string, pool_pre_ping=True)
+        # Try opening a connection to test it right away
+        with engine.connect() as conn:
+            print("✅ Connection to MySQL Database secured successfully.")
 
-        print("connection to mysql Database has been secured succesfully.")
+        return engine
+
     except Exception as e:
-        print(e.message)
-
-    return engine 
+        print("❌ Failed to create engine:", str(e))
+        return None

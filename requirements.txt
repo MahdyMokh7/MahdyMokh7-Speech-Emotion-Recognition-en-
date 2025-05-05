@@ -2,6 +2,7 @@
 mysql-connector-python
 sqlalchemy
 pymysql
+cryptography
 
 # Data manipulation and processing
 pandas
