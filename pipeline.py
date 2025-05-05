@@ -2,10 +2,10 @@ import subprocess
 import os
 
 # Pre-process
-subprocess.run(["python", "./scripts/preprocess.py"])
+subprocess.run(["python", r"C:\Users\Mahmodiyan-PC\Desktop\agha alborz\term6\datascience\final project\Speech-Emotion-Recognition-en-\scripts\preprocess.py"])
 
 # Feature Extraction
-subprocess.run(["python", "./scripts/feature_extraction.py"])
+subprocess.run(["python", r"C:\Users\Mahmodiyan-PC\Desktop\agha alborz\term6\datascience\final project\Speech-Emotion-Recognition-en-\scripts\feature_extraction.py"])
 
 # Import features to DB
 # arg_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\final_features_ImportReady.csv"

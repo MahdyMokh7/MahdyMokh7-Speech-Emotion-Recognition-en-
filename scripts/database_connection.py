@@ -18,7 +18,6 @@ def get_connection():
         print("Port:", port)
         print("Database:", database)
 
-
         connection_string = f"mysql+pymysql://{username}:{password}@{host}:{port}/{database}"
         engine = create_engine(connection_string, pool_pre_ping=True)
         # Try opening a connection to test it right away
