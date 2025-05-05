@@ -554,3 +554,13 @@ CREATE TABLE `Features` (
   `chroma3_frame_61` float,
   `chroma3_frame_62` float
 );
+
+ALTER TABLE Features
+ADD PRIMARY KEY (file_name(255));
+
+ALTER TABLE Features
+MODIFY COLUMN emotion INT NOT NULL;
+
+ALTER TABLE Features
+MODIFY COLUMN emotion_category Varchar(255) NOT NULL;
+

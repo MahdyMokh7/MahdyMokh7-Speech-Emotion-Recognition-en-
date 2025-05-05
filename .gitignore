@@ -8,4 +8,5 @@ StatisticalImages/
 DataSet/
 PreProcessedDataSet_for_ML/
 Features/
+app/
 .env

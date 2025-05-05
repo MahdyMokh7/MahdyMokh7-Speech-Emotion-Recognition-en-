@@ -3,13 +3,18 @@ StatisticalImages/
 NoteBooks/
 Helper/
 Analytics/
+PreProcessedDataSet_for_ML/
+Features/
+
 
 # Exclude documentation files
 *.md
 *.pdf
+*.docx
 
 # Exclude environment configuration files (if sensitive data is inside)
-.env
+<!-- .env -->
+
 
 # Exclude Git-related files
 .git/

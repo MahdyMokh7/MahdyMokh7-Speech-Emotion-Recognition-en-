@@ -1,0 +1,71 @@
+## 1. Build a Docker Image
+
+```bash
+docker build -t <image_name> .
+```
+
+
+## 2. List Docker Images
+
+```bash
+docker images
+```
+
+
+## 3. Run a Docker Image
+
+```bash
+docker run -it <image_name>
+```
+
+
+## 4. Delete a Docker Image
+
+### List Images to Get the Image ID
+```bash
+docker images
+```
+
+### Delete the Image
+Once you know the image ID, use the following command:
+
+```bash
+docker rmi <image_id>
+```
+
+### Force Deletion
+If the image is being used by any container, you can force the removal using the `-f` flag:
+
+```bash
+docker rmi -f <image_id>
+```
+
+## 5. Stop and Remove a Running Container
+To stop a running container, use:
+
+```bash
+docker ps
+```
+
+This will show the list of running containers with their IDs.
+
+Then stop the container:
+
+```bash
+docker stop <container_id>
+```
+
+To remove the stopped container:
+
+```bash
+docker rm <container_id>
+```
+
+## 6. Clean Up Unused Docker Resources (Optional)
+To remove any dangling images (images that are not tagged or associated with any container), use:
+
+```bash
+docker image prune
+```
+
+This will delete unused images to free up disk space.
