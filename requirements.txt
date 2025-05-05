@@ -20,3 +20,6 @@ scikit-learn
 # Data visualization
 matplotlib
 seaborn
+
+# Environment variable management
+python-dotenv

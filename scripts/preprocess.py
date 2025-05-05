@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 
 
 # === CONFIGURATION ===
-MAIN_FOLDER_PATH = ".."
-PRE_PROCESSED_PATH = ".."
+MAIN_FOLDER_PATH = "."    # updated for docker (.. -> .)############################
+PRE_PROCESSED_PATH = "."  # updated for docker (.. -> .)##########################
 DATASET_PATH = os.path.join(MAIN_FOLDER_PATH, "DataSet")
 OUTPUT_FOLDER = os.path.join(PRE_PROCESSED_PATH, "PreProcessedDataSet_for_ML")
 TARGET_SR = 16000   # sapmle rate
