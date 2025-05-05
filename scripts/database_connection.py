@@ -3,10 +3,11 @@ from sqlalchemy import create_engine
 def get_connection():
     # Database credentials (replace with your own)
     try:
+
         username = "root"
-        password = "7700"
+        password = "alborz1382"
         host = "localhost"   
-        port = "3306"
+        port = "3006"
         database = "SER_DB"
 
         connection_string = f"mysql+pymysql://{username}:{password}@{host}:{port}/{database}"
@@ -17,3 +18,4 @@ def get_connection():
         print(e.message)
 
     return engine 
+

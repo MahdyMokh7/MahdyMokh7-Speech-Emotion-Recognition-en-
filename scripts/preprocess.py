@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 # === CONFIGURATION ===
 MAIN_FOLDER_PATH = ".."
 PRE_PROCESSED_PATH = ".."
-DATASET_PATH = os.path.join(MAIN_FOLDER_PATH, "DataSet")
-OUTPUT_FOLDER = os.path.join(PRE_PROCESSED_PATH, "PreProcessedDataSet_for_ML")
+DATASET_PATH = os.path.join("F:", "DataSet")
+OUTPUT_FOLDER = os.path.join("F:", "PreProcessedDataSet_for_ML")
 TARGET_SR = 16000   # sapmle rate
 SILENCE_TOP_DB = 35
 HIGHPASS_CUTOFF = 85  # cutoff to remove low-frequency noise
@@ -23,9 +23,6 @@ HOP_LENGTH = 205 # 12.8 ms step → 60% overlap
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 os.makedirs(VISUALIZATION_DIR, exist_ok=True)
-
-
-
 
 
 def load_and_resample_audio(file_path, sr=TARGET_SR):
@@ -62,8 +59,6 @@ def is_not_empty(audio):
 
 
 
-
-
 SEGMENT_DURATION = 0.8
 OVERLAP = 0.4
 
@@ -82,6 +77,10 @@ def split_audio(audio, sr, base_filename,
         chunk_path = os.path.join(OUTPUT_FOLDER, chunk_filename)
         sf.write(chunk_path, chunk, sr)
 
+        #save_waveform_plot(chunk, sr, f"{base_filename}_chunk{i+1}_waveform")
+        # waveform_path = os.path.join("waveforms", f"{base_filename}_chunk{i+1}_waveform.png")
+        # visualize_audio_features(chunk, sr, file_path=waveform_path)
+
         i += 1
         start = end - int(sr * overlap)   
 
@@ -98,23 +97,31 @@ def split_audio(audio, sr, base_filename,
         chunk_path = os.path.join(OUTPUT_FOLDER, chunk_filename)
         sf.write(chunk_path, padded_chunk, sr)
 
-
-
-
-
         # =================== PIPELINE PROCESS FUNCTION ===================
 def process_audio_file(file_path):
     """Apply full preprocessing pipeline to a single audio file (for traditional ML)."""
     try:
-        print(f"Processing: {file_path}")
+        #print(f"Processing: {file_path}")
         audio, sr = load_and_resample_audio(file_path) 
-        if(is_not_empty(audio)):
-            audio = convert_to_mono(audio)
-            audio = apply_highpass_filter(audio, sr)
-            audio = reduce_noise(audio, sr)
-            audio = trim_silence(audio)
-            audio = normalize_audio(audio)
+        if is_not_empty(audio):
 
+            #save_waveform_plot(audio, sr, "step1_original")
+
+            audio = convert_to_mono(audio)
+            #save_waveform_plot(audio, sr, "step2_mono")
+
+            audio = apply_highpass_filter(audio, sr)
+            #save_waveform_plot(audio, sr, "step3_highpass")
+
+            audio = reduce_noise(audio, sr)
+            #save_waveform_plot(audio, sr, "step4_denoised")
+
+            audio = trim_silence(audio)
+            #save_waveform_plot(audio, sr, "step5_trimmed")
+
+            audio = normalize_audio(audio)
+            #save_waveform_plot(audio, sr, "step6_normalized")
+                
             split_audio(audio, sr, os.path.basename(file_path), SEGMENT_DURATION, OVERLAP)
 
     except Exception as error:
@@ -132,6 +139,7 @@ def preprocess_dataset():
         if filename.lower().endswith(".wav"):
             file_path = os.path.join(DATASET_PATH, filename)
             process_audio_file(file_path)
+            break
     print("\nAll audio files have been preprocessed and saved in: ", OUTPUT_FOLDER)
 
 

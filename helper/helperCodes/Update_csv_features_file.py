@@ -3,7 +3,7 @@ import ast
 import numpy as np
 
 # Load the CSV file
-csv_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\final_features.csv"
+csv_file_path = r"F:\csv_features\final_features.csv"
 df = pd.read_csv(csv_file_path)
 
 print("csv read completed.")
@@ -64,7 +64,7 @@ df['emotion_category'] = df['emotion'].map(emotion_mapping)
 
 print("started writing in the csv...")
 # Save the cleaned DataFrame to a new CSV
-cleaned_csv_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\cleaned_final_features.csv"
+cleaned_csv_file_path = r"F:\csv_features\cleaned_final_features.csv"
 df.to_csv(cleaned_csv_file_path, index=False)
 
 print(f"Cleaned CSV saved at: {cleaned_csv_file_path}")

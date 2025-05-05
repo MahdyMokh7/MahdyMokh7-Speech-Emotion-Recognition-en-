@@ -559,9 +559,8 @@ SHOW TABLES;
 
 DESCRIBE Features;
 
-Select * 
-from features
-limit 10;
+Select COUNT(*) 
+from features;
 
 
 
