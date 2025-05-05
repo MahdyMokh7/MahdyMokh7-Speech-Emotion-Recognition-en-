@@ -1,7 +1,10 @@
 import pandas as pd
+import os
 
 # Load the cleaned CSV file
-csv_file_path = r"F:\csv_features\cleaned_final_features.csv"
+# csv_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\cleaned_final_features.csv"
+FEATURES_FOLDER_PATH = os.path.join(".", "Features")
+csv_file_path = os.path.join(FEATURES_FOLDER_PATH, "cleaned_final_features.csv")
 df = pd.read_csv(csv_file_path)
 
 # Define the desired column order based on your schema
@@ -123,7 +126,8 @@ print("started reordering..")
 df = df[column_order]
 
 # Save the reordered DataFrame to a new CSV
-cleaned_and_ordered_csv_file_path = r"F:\csv_features\final_features_ImportReady.csv"
+# cleaned_and_ordered_csv_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\final_features_ImportReady.csv"
+cleaned_and_ordered_csv_file_path = os.path.join(FEATURES_FOLDER_PATH, "final_features_ImportReady.csv")
 df.to_csv(cleaned_and_ordered_csv_file_path, index=False)
 
 print(f"Reordered CSV saved at: {cleaned_and_ordered_csv_file_path}")

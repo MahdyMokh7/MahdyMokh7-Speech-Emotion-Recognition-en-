@@ -10,14 +10,15 @@ import matplotlib.pyplot as plt
 
 
 # === CONFIGURATION ===
-MAIN_FOLDER_PATH = ".."
-PRE_PROCESSED_PATH = ".."
-DATASET_PATH = os.path.join("F:", "DataSet")
-OUTPUT_FOLDER = os.path.join("F:", "PreProcessedDataSet_for_ML")
+MAIN_FOLDER_PATH = "."    # updated for docker (.. -> .)############################
+PRE_PROCESSED_PATH = "."  # updated for docker (.. -> .)##########################
+DATASET_PATH = os.path.join(MAIN_FOLDER_PATH, "DataSet")
+OUTPUT_FOLDER = os.path.join(PRE_PROCESSED_PATH, "PreProcessedDataSet_for_ML")
+
 TARGET_SR = 16000   # sapmle rate
 SILENCE_TOP_DB = 35
 HIGHPASS_CUTOFF = 85  # cutoff to remove low-frequency noise
-VISUALIZATION_DIR = "AudioVisualizations"
+VISUALIZATION_DIR = os.path.join(".", "StatisticalImages", "AudioVisualizations")
 N_FFT = 512 # 32 ms window 
 HOP_LENGTH = 205 # 12.8 ms step → 60% overlap
 

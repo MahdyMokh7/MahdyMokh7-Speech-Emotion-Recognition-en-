@@ -2,6 +2,7 @@
 mysql-connector-python
 sqlalchemy
 pymysql
+cryptography
 
 # Data manipulation and processing
 pandas
@@ -21,5 +22,5 @@ scikit-learn
 matplotlib
 seaborn
 
-# Miscellaneous
-itertools
+# Environment variable management
+python-dotenv
