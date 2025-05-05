@@ -554,14 +554,3 @@ CREATE TABLE `Features` (
   `chroma3_frame_61` float,
   `chroma3_frame_62` float
 );
-
-SHOW TABLES;
-
-DESCRIBE Features;
-
-Select * 
-from features
-limit 10;
-
-
-
