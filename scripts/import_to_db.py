@@ -6,6 +6,7 @@ print("import_to_db.py argumnet recieved:  ", sys.argv[1])
 
 if len(sys.argv) > 1:
     csv_file_path = sys.argv[1] 
+    print(csv_file_path)
     print(f"CSV file path received: {csv_file_path}")
 else:
     print("No CSV file path argument provided.")
@@ -21,6 +22,6 @@ if engine is None:
 
 print(f"moving the csv file {sys.argv[1]}  to the databse")
 
-df.head(10).to_sql(name='features', con=engine, if_exists='replace', index=False)
+df.to_sql(name='features', con=engine, if_exists='replace', index=False)
 
 print("DataFrame written to MySQL table")

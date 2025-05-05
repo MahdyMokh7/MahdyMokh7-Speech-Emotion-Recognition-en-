@@ -3,20 +3,16 @@ import numpy as np
 import pandas as pd
 import librosa
 from sklearn.preprocessing import LabelEncoder
-from sklearn.feature_selection import mutual_info_classif
 import seaborn as sns
 import ast
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
 from sklearn.feature_selection import mutual_info_classif, f_classif
 from itertools import combinations
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 
 
+os.makedirs("Analytics", exist_ok=True)
 
 # === CONFIGURATION ===
 preprocessed_dataset_path = os.path.join(".", "PreProcessedDataSet_for_ML")   # updated for docker(.. -> .) #######################
@@ -25,6 +21,7 @@ csv_features_path = os.path.join(FEATURE_FOLDER_PATH, "audio_features.csv")
 csv_features_path_separated = os.path.join(FEATURE_FOLDER_PATH, "audio_features_separated.csv")
 csv_aggregated_features_path = os.path.join(FEATURE_FOLDER_PATH, "audio_aggregated_features.csv")
 csv_final_features_path = os.path.join(FEATURE_FOLDER_PATH, "final_features.csv")
+
 N_FFT = 512 # 32 ms window 
 HOP_LENGTH = 205 # 12.8 ms step → 60% overlap
 SR=16000 
@@ -158,7 +155,7 @@ for file in os.listdir(preprocessed_dataset_path):
         if result is not None and aggregated_result is not None:
             parts = file.split('_')
             emotion = parts[2]
-            print(f"features are extracted from : {file}")
+            #print(f"features are extracted from : {file}")
             feature_vector = [list(feature) for feature in result]
             features.append(feature_vector)
             aggregated_features.append(aggregated_result)
@@ -184,9 +181,7 @@ df_aggregated_features.to_csv(csv_aggregated_features_path, index=False)
 
 
 
-
-
-
+df_aggregated_features = pd.read_csv(csv_aggregated_features_path)
 # Define features and target
 X = df_aggregated_features.iloc[:, 1:-1]  # Features: all columns except first (filename) and last (target)
 y = df_aggregated_features.iloc[:, -1]    # Target: last column
@@ -206,6 +201,12 @@ aggregated_MI_corr_df = pd.DataFrame({
 
 aggregated_MI_corr_df.to_csv("Analytics/mi_corr_aggregated_features.csv", index=False)
 
+
+
+
+
+
+df_framewise_features = pd.read_csv(csv_features_path)
 
 feature_columns = df_framewise_features.columns[1:-1]
 results = []
@@ -247,6 +248,9 @@ framewise_MI_corr_df.to_csv("Analytics/framewise_mi_corr_all_features.csv", inde
 
 
 final_df = pd.DataFrame()
+
+framewise_MI_corr_df = pd.read_csv("Analytics/framewise_mi_corr_all_features.csv")
+aggregated_MI_corr_df = pd.read_csv("Analytics/mi_corr_aggregated_features.csv")
 
 # Loop through all features
 for feature in all_feature_names:
@@ -473,7 +477,6 @@ df = df[column_order]
 # cleaned_and_ordered_csv_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\final_features_ImportReady.csv"
 cleaned_and_ordered_csv_file_path = os.path.join(FEATURES_FOLDER_PATH, "final_features_ImportReady.csv")
 df.to_csv(cleaned_and_ordered_csv_file_path, index=False)
-
 print(f"Reordered CSV saved at: {cleaned_and_ordered_csv_file_path}")
 
 

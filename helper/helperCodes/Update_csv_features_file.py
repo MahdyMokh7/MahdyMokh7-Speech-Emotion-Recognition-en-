@@ -4,6 +4,7 @@ import numpy as np
 import os
 
 # Load the CSV file
+
 # csv_file_path = r"C:\Users\NoteBook\Desktop\programing\Data Science\Uni project\final project\Features\final_features.csv"
 FEATURES_FOLDER_PATH = os.path.join(".", "Features")
 csv_file_path = os.path.join(FEATURES_FOLDER_PATH ,"final_features.csv")
